@@ -1,1 +1,65 @@
+.container {
+	border-radius: 500px;
+	height: auto;
+	margin: 0 auto;
+	background-color: #23A6D5;
+	padding: 25px;
+	color: #fff;
+	background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+	background-size: 400% 400%;
+	position: relative;
+	animation: change 10s ease-in-out infinite;
+}
 
+div {
+	height: auto;
+	margin: 0 auto;
+	border: 0px solid black;
+}
+
+form {
+	border: 0px solid #606060;
+	border-radius: 25px;
+	background-color: #000000;
+	opacity: 1;
+	
+	width: 34%;
+	height: 19%;
+	margin: auto;
+	text-align: center;
+	font-size: 14px;
+	padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+}
+
+@keyframes change {
+	0% {
+		background-position: 0 50%;
+	}
+
+	50% {
+		background-position: 100% 50%;
+	}
+
+	100% {
+		background-position: 0 50%;
+	}
+}
+
+input[id=submit_btn] {
+	
+	cursor: pointer;
+	border-radius: 15px;
+}
+
+button[id=datedisplayer] {
+	
+	cursor: pointer;
+	border-radius: 15px;
+}
+
+input {
+    margin-bottom: 25px;
+}
