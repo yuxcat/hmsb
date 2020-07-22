@@ -1,21 +1,26 @@
 <html>
    <head>
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="styles.css">
+      <script type="text/javascript" src="script.js"></script>
+	  <link rel="stylesheet" href="styles.css">
+	  <link rel="stylesheet" href="forms.css">
+      <link rel="stylesheet" href="buttons.css">
+	  <link rel="stylesheet" href="base.css">
    </head>
    <!-- calling booking php file -->
    <body>
       <div class="container">
-	  <form action="booking.php" method="POST" name="dates">
-         <label for="checkin">Check In Date:</label>
-         <input type="date" name="checkin">
+	  <form class="pure-form" action="booking.php" method="POST" name="dform" onsubmit="return pickvalidate()">
+		 <label for="checkin">Check In Date:</label>
+         <input id="ch1" type="date" name="checkin">
         
          <label for="checkout">Check Out Date:</label>
-         <input type="date" name="checkout">
+         <input id="ch2" type="date" name="checkout">
 		 
+		 <label for="checkbox-radio-option-one" class="pure-checkbox">
+        <input type="checkbox" id="checkbox-radio-option-one" value="" />Departure Haven&#x27;t Decided Yet.</label>
          <!-- roomq : room quantity -->
          <p>
-		 <br>
             <roomq=r oom quantity*/ <label>Rooms</label>
             <select name="roomsdd">
                <option value="1">1</option>
@@ -56,13 +61,13 @@
                <option value="9">9</option>
                <option value="10">10</option>
             </select>
-            <input id="submit_btn" type="submit" value="Book"> 
+            <input id="submit_btn" class="pure-button pure-button-primary" type="submit" value="Reserve" onclick="myFunction()"> 
       </form>
 	  </div>
       <br>
       <br>
-      <button id="datedisplayer" type="button" onclick="document.getElementById('displayblock').innerHTML = Date()">Check Current Date and Time.</button>
+      <button id="datedisplayer" class="pure-button pure-button-primary" type="button" onclick="document.getElementById('displayblock').innerHTML = Date()">Check Current Date and Time</button>
       <p id="displayblock"></p>
+      <p id="demo"></p>
    </body>
 </html>
-
