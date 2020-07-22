@@ -30,7 +30,7 @@ form {
 	font-size: 14px;
 	padding-top: 30px;
     padding-right: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 95px;
     padding-left: 30px;
 }
 
@@ -52,12 +52,14 @@ input[id=submit_btn] {
 	
 	cursor: pointer;
 	border-radius: 15px;
+	margin: 50px;
 }
 
 button[id=datedisplayer] {
 	
 	cursor: pointer;
 	border-radius: 15px;
+	margin: 10px;
 }
 
 input {
