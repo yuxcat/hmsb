@@ -1,5 +1,5 @@
 .container {
-	border-radius: 500px;
+	border-radius: 68px;
 	height: auto;
 	margin: 0 auto;
 	background-color: #23A6D5;
@@ -13,25 +13,27 @@
 
 div {
 	height: auto;
-	margin: 0 auto;
+	width: auto;
+	
 	border: 0px solid black;
 }
 
 form {
 	border: 0px solid #606060;
 	border-radius: 25px;
-	background-color: #000000;
+	background-color: #f5f8fa ;
 	opacity: 1;
-	
+	overflow: hidden;
 	width: 34%;
-	height: 19%;
+	height: auto;
 	margin: auto;
-	text-align: center;
+	
+	color: #555;
 	font-size: 14px;
-	padding-top: 30px;
-    padding-right: 30px;
-    padding-bottom: 95px;
-    padding-left: 30px;
+	padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom:65px;
+    padding-left: 0px;
 }
 
 @keyframes change {
@@ -48,11 +50,21 @@ form {
 	}
 }
 
+.btn_wrap{
+	display: flex;
+	justify-content: center;
+	
+}
+
 input[id=submit_btn] {
 	
 	cursor: pointer;
 	border-radius: 15px;
-	margin: 50px;
+	margin: 30px;
+	position: absolute;
+	display: inline-block;
+	
+	
 }
 
 button[id=datedisplayer] {
@@ -60,8 +72,34 @@ button[id=datedisplayer] {
 	cursor: pointer;
 	border-radius: 15px;
 	margin: 10px;
+	
 }
 
-input {
-    margin-bottom: 25px;
+input[id=ch1],[id=ch2],[id=dd1],[id=dd2],[id=dd3] {
+	
+	cursor: pointer;
+	
+	
+}
+
+.datew1, .datew2, .checkw, .ddw1, .ddw2, .ddw3, .btn_wrap {
+margin: 5px;
+}
+
+.inp {
+  width: 250px;
+  margin-top : 5px;
+ 
+  
+}
+
+label {
+  display: inline-block;
+  width: 150px;
+  text-align: right;
+}​
+
+#dd1 {
+	border-radius: 18px;
+	border: 2px solid #609;
 }
