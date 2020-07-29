@@ -1,0 +1,19 @@
+a partial testing db for bookings and availability checking
+
+DB - "hms"
+Tables - "rooms" , "bookings"
+
+Columns of "rooms"
+- room_no / int(20)
+- type   / varchar(20)
+- rate  / int(20)
+
+Columns of "bookings"
+
+- id             / int(20) / AUTO_INCREMENT / P_Key
+- room_no       /  int(20)
+- checkin      /   DATE
+- checkout    /    DATE
+- rooms      /     int(20)
+- adults    /      int(20)
+- lils     /       int(20)
