@@ -2,8 +2,19 @@
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 			<script type="text/javascript" src="js/script.js"></script>
+			<script type="text/javascript" src="js/jquery.js"></script>
+            <script>
+			$(document).ready(function(){
+            $("button").click(function(){
+            $("#div1").load("filtered.php");
+            });
+          });
+
+			
+			</script>
 			<link rel="stylesheet" href="css/styles.css">
 				<link rel="stylesheet" href="css/pure.css">
+				
 				</head>
 				<!-- calling booking php file -->
 				<body>
@@ -65,8 +76,28 @@
 										<div class="btn_wrap">
 											<input id="submit_btn" class="pure-button pure-button-primary" type="submit" value="Reserve">
 											</div>
+											
+											<!-- Stat - passing the seesion causing parameter anormalies, so i implemented the roomlist here. -->
+											
+											
+											<div id="div1"></div>
+											
+											
+											<!-- end of the implementation, adios-->
 										</form>
+										
+										
 									</div>
-									<p id="demo"></p>
+									
+								<div class="btn_wrap2">
+											
+											
+											<button class="button-secondary pure-button" onclick="innercheck()" id="btn" >Check Availability</button>
+											
+											
+											</div>
+									
+									
 								</body>
+								
 							</html>
