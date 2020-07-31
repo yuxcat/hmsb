@@ -18,6 +18,7 @@
 	Databse : hms ( fill the 4th slot of $db line )
 	password : none ( fill 3rd slot of $db query line )
 	
+	BUGs : Lower mysql /php versions might cause errors with room availability checker.
 	
 	*/
     $db = mysqli_connect("localhost","root","","hms");
