@@ -1,12 +1,4 @@
-function myFunction() {
-	var txt;
-	if(confirm("Are You Sure")) {
-		txt = "You pressed OK!";
-	} else {
-		txt = "You pressed Cancel!";
-	}
-	document.getElementById("demo").innerHTML = txt;
-}
+
 
 function pickvalidate() {
 	
@@ -26,13 +18,23 @@ function pickvalidate() {
 	}
 	
 	
-	var option=document.getElementsByName('slct');
-
-if (!(option[0].checked || option[1].checked)) {
-    alert("Please select a room");
+	
+	
+	
+	
+	var selector = document.getElementsByName("slct");
+  var check = 0;
+  for(i=0;i<selector.length;i++){
+    if(selector[i].checked){
+      check++;
+      break;
+    }
+  }
+  if(check){
+  }else{
+    alert("Please Check Availability and select a room");
     return false;
-}
-
+  }
 	
 }
 
