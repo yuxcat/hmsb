@@ -1,17 +1,10 @@
 <html>
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		    <script type="text/javascript" src="js/jquery.js"></script>
 			<script type="text/javascript" src="js/script.js"></script>
-			<script type="text/javascript" src="js/jquery.js"></script>
-            <script>
-			$(document).ready(function(){
-            $("button").click(function(){
-            $("#div1").load("filtered.php");
-            });
-          });
-
-			
-			</script>
+            <script type="text/javascript" src="js/innerload.js"></script>
+			<script type="text/javascript" src="js/gajax.js"></script>
 			<link rel="stylesheet" href="css/styles.css">
 				<link rel="stylesheet" href="css/pure.css">
 				
@@ -19,13 +12,13 @@
 				<!-- calling booking php file -->
 				<body>
 					<div class="container">
-						<form class="pure-form" action="booking.php" method="POST" name="dform" onsubmit="return pickvalidate()">
+						<form id="inputform" onchange="" class="pure-form" action="booking.php" method="POST" name="dform" onsubmit="return pickvalidate()">
 							<br>
 								<div class="datew1">
-									<input id="ch1" type="date" name="checkin" class="inp">
+									<input id="ch1" type="date" name="checkin" class="inp" value="">
 									</div>
 									<div class="datew2">
-										<input id="ch2" type="date" name="checkout" class="inp">
+										<input id="ch2" type="date" name="checkout" class="inp" value="" >
 										</div>
 										<!-- roomq : room quantity -->
 										<div class="ddw1">
@@ -74,13 +67,13 @@
 											</div>
 										</div>
 										<div class="btn_wrap">
-											<input id="submit_btn" class="pure-button pure-button-primary" type="submit" value="Reserve">
+											<input id="submit_btn" name = "submitbtn" class="pure-button pure-button-primary" type="submit" value="Reserve">
 											</div>
 											
 											<!-- Stat - passing the seesion causing parameter anormalies, so i implemented the roomlist here. -->
 											
 											
-											<div id="div1"></div>
+											<div name="ajaxloader" id="div1"></div>
 											
 											
 											<!-- end of the implementation, adios-->
@@ -92,7 +85,7 @@
 								<div class="btn_wrap2">
 											
 											
-											<button class="button-secondary pure-button" onclick="innercheck()" id="btn" >Check Availability</button>
+											<button class="button-secondary pure-button" onclick="post();" id="btn"  >Check Availability</button>
 											
 											
 											</div>
