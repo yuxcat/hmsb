@@ -1,25 +1,36 @@
 <?php
-/*echo $_POST["checkin"];
-echo $_POST["checkout"];
-echo $_POST["roomsdd"];
-echo $_POST["adultsdd"];
-echo $_POST["lildd"];
-/* @mysql : error hiding : use mySQL or PDO since mysql extention will remove in the future */
-$con = @mysql_connect("localhost", "root", "");
-if (!$con)
-{
-    die('Could not connect: ' . mysql_error());
-}
-mysql_select_db("hms", $con);
-$sql = "INSERT INTO bookings (room_no, checkin, checkout, rooms, adults, lils)
-VALUES
-('$_POST[slct]','$_POST[checkin]','$_POST[checkout]','$_POST[roomsdd]','$_POST[adultsdd]','$_POST[lildd]')";
-if (!mysql_query($sql, $con))
-{
-    die('Error: ' . mysql_error());
-}
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
 
-echo "1 record added";
-mysql_close($con)
+
+
+/* including db file */
+include "db.php";
+ 
+// Check connection
+if($db === false){
+    die("ERROR: Could not connect. " . mysqli_connect_error());
+}
+ 
+// Escaping user inputs for security
+$selectroom_no = mysqli_real_escape_string($db, $_POST['slct']);
+$checkindate = mysqli_real_escape_string($db, $_POST['checkin']);
+$checkoutdate = mysqli_real_escape_string($db, $_POST['checkout']);
+$roomscount = mysqli_real_escape_string($db, $_POST['roomsdd']);
+$adultscount = mysqli_real_escape_string($db, $_POST['adultsdd']);
+$lilcount = mysqli_real_escape_string($db, $_POST['lildd']);
+ 
+// inserting query execution
+$sql = "INSERT INTO bookings (room_no, checkin, checkout, rooms, adults, lils) VALUES ('$selectroom_no', '$checkindate', '$checkoutdate', '$roomscount', '$adultscount', '$lilcount')";
+if(mysqli_query($db, $sql)){
+    echo "Records added successfully.";
+} else{
+    echo "ERROR: Could not able to execute $sql. " . mysqli_error($db);
+}
+ 
+// Closing the connection
+mysqli_close($db);
 ?>
