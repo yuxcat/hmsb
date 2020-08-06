@@ -1,9 +1,7 @@
+<!DOCTYPE html>
 <html>
 
 <head>
-<script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/script.js"></script>
-<script type="text/javascript" src=""></script>
 <link rel="stylesheet" href="css/pure.css">
 <link rel="stylesheet" href="css/rooms.css">
 
