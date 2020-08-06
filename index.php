@@ -4,7 +4,7 @@
 		    <script type="text/javascript" src="js/jquery.js"></script>
 			<script type="text/javascript" src="js/script.js"></script>
             <script type="text/javascript" src="js/innerload.js"></script>
-			<script type="text/javascript" src="js/ajax.js"></script>
+			<script type="text/javascript" src="js/gajax.js"></script>
 			<link rel="stylesheet" href="css/styles.css">
 				<link rel="stylesheet" href="css/pure.css">
 				
@@ -85,7 +85,7 @@
 								<div class="btn_wrap2">
 											
 											
-											<button class="button-secondary pure-button" onclick="post();" id="btn"  >Check Availability</button>
+											<button class="button-secondary pure-button" onclick="post(); return false;" id="btn"  >Check Availability</button>
 											
 											
 											</div>
