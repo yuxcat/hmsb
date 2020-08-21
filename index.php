@@ -2,9 +2,11 @@
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		    <script type="text/javascript" src="js/jquery.js"></script>
-			<script type="text/javascript" src="js/script.js"></script>
-            <script type="text/javascript" src="js/innerload.js"></script>
 			<script type="text/javascript" src="js/ajax.js"></script>
+			<script type="text/javascript" src="js/innerload.js"></script>
+			<script type="text/javascript" src="js/script.js"></script>
+            
+			
 		<link rel="stylesheet" href="css/pure.css">
 			<link rel="stylesheet" href="css/styles.css">
 				
