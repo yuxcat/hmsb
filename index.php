@@ -67,6 +67,18 @@
 													<option value="10">10 children</option>
 												</select>
 											</div>
+											
+											
+										</div>
+										
+										<div class="ddw4">
+											<select id="dd4" name="hotelname" class="inp4">
+												<option value="hotel1">Sea Side North Park</option>
+												<option value="hotel2">Sea Side South Park</option>
+												<option value="hotel3">Sea Side West Park</option>
+												<option value="hotel4">Sea Side East Park</option>
+												
+											</select>
 										</div>
 										<div class="btn_wrap">
 											<input id="submit_btn" name = "submitbtn" class="pure-button pure-button-primary" type="submit" value="Reserve">
@@ -87,7 +99,7 @@
 								<div class="btn_wrap2">
 											
 											
-											<button class="button-secondary pure-button" onclick="post(); return false;" id="btn"  >Check Availability</button>
+											<button class="button-secondary pure-button" onclick="post();" id="btn"  >Check Availability</button>
 											
 											
 											</div>
