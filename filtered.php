@@ -26,10 +26,11 @@ include "db.php"; // Using database connection file here
 
 $cid = isset($_POST['postcidate']) ? $_POST['postcidate']: '';
 $cod = isset($_POST['postcodate']) ? $_POST['postcodate']: '';
+$hname = isset($_POST['posthname']) ? $_POST['posthname']: '';
 
 
 $records = mysqli_query($db, "SELECT *
-FROM rooms
+FROM $hname
 WHERE room_no NOT IN (
    SELECT DISTINCT room_no
    FROM bookings
