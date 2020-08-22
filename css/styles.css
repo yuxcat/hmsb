@@ -11,7 +11,7 @@
 	animation: change 10s ease-in-out infinite;
 }
 
-.container, .datew1, .datew2, .ddw1, .ddw2, .indd, .indd2, .btn_wrap {
+.container, .datew1, .datew2, .ddw1, .ddw2, .ddw4, .indd, .indd2, .btn_wrap {
 	height: auto;
 	width: auto;
     display: flex;
@@ -80,18 +80,18 @@ button[id=datedisplayer] {
 	
 }
 
-input[id=ch1],[id=ch2],[id=dd1],[id=dd2],[id=dd3] {
+input[id=ch1],[id=ch2],[id=dd1],[id=dd2],[id=dd3],[id=dd4] {
 	
 	cursor: pointer;
 	
 	
 }
 
-.datew1, .datew2, .checkw, .ddw1,.ddw2, .ddw3, .btn_wrap {
+.datew1, .datew2, .checkw, .ddw1,.ddw2, .ddw3, .ddw4, .btn_wrap {
 margin: 5px;
 }
 
-.inp {
+.inp, .inp4 {
   width: 250px;
 }
 
