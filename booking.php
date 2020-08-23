@@ -17,6 +17,7 @@ if($db === false){
  
 // Escaping user inputs for security
 $selectroom_no = mysqli_real_escape_string($db, $_POST['slct']);
+$hotel_name = mysqli_real_escape_string($db, $_POST['hotelname']);
 $checkindate = mysqli_real_escape_string($db, $_POST['checkin']);
 $checkoutdate = mysqli_real_escape_string($db, $_POST['checkout']);
 $roomscount = mysqli_real_escape_string($db, $_POST['roomsdd']);
@@ -24,7 +25,7 @@ $adultscount = mysqli_real_escape_string($db, $_POST['adultsdd']);
 $lilcount = mysqli_real_escape_string($db, $_POST['lildd']);
  
 // inserting query execution
-$sql = "INSERT INTO bookings (room_no, checkin, checkout, rooms, adults, lils) VALUES ('$selectroom_no', '$checkindate', '$checkoutdate', '$roomscount', '$adultscount', '$lilcount')";
+$sql = "INSERT INTO bookings (room_no, hotelname, checkin, checkout, rooms, adults, lils) VALUES ('$selectroom_no', '$hotel_name', '$checkindate', '$checkoutdate', '$roomscount', '$adultscount', '$lilcount')";
 if(mysqli_query($db, $sql)){
     echo "Records added successfully.";
 } else{
