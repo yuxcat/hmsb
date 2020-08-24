@@ -73,10 +73,10 @@
 										
 										<div class="ddw4">
 											<select id="dd4" name="hotelname" class="inp4">
-												<option value="hotel1">Sea Side North Park</option>
-												<option value="hotel2">Sea Side South Park</option>
-												<option value="hotel3">Sea Side West Park</option>
-												<option value="hotel4">Sea Side East Park</option>
+												<option value="sssp">Sea Side South Park</option>
+												<option value="ssnp">Sea Side North Park</option>
+												<option value="sswp">Sea Side West Park</option>
+												<option value="ssep">Sea Side East Park</option>
 												
 											</select>
 										</div>
