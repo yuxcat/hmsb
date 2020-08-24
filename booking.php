@@ -1,5 +1,8 @@
 <?php
 
+session_start();
+
+
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
@@ -23,11 +26,12 @@ $checkoutdate = mysqli_real_escape_string($db, $_POST['checkout']);
 $roomscount = mysqli_real_escape_string($db, $_POST['roomsdd']);
 $adultscount = mysqli_real_escape_string($db, $_POST['adultsdd']);
 $lilcount = mysqli_real_escape_string($db, $_POST['lildd']);
+$current_user = mysqli_real_escape_string($db, $_SESSION['username']);
  
 // inserting query execution
-$sql = "INSERT INTO bookings (room_no, hotelname, checkin, checkout, rooms, adults, lils) VALUES ('$selectroom_no', '$hotel_name', '$checkindate', '$checkoutdate', '$roomscount', '$adultscount', '$lilcount')";
+$sql = "INSERT INTO bookings (room_no, username, hotelname, checkin, checkout, rooms, adults, lils) VALUES ('$selectroom_no', '$current_user', '$hotel_name', '$checkindate', '$checkoutdate', '$roomscount', '$adultscount', '$lilcount')";
 if(mysqli_query($db, $sql)){
-    echo "Records added successfully.";
+    header("Location: thankyou.php");
 } else{
     echo "ERROR: Could not able to execute $sql. " . mysqli_error($db);
 }
